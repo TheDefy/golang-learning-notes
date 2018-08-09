@@ -91,7 +91,7 @@ func isShellSpecialVar(c uint8) bool {
 
 func BufferTest() {
 	var b bytes.Buffer
-	b.Write([]byte("LearningNotes ")) // 将字符串写入到buffer中
+	b.Write([]byte("hello ")) // 将字符串写入到buffer中
 	fmt.Fprintf(&b, "world !")
 
 	io.Copy(os.Stdout, &b)
