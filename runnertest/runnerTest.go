@@ -1,10 +1,10 @@
-package hello
+package main
 
 import (
-	"runner"
 	"time"
 	"log"
 	"os"
+	"thedefy/LearningNotes/runnertest/runner"
 )
 
 const timeout = 3 * time.Second

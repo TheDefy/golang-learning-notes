@@ -1,4 +1,4 @@
-package hello
+package funclearn
 
 import (
 	"reflect"
@@ -7,7 +7,7 @@ import (
 	"math"
 )
 
-func applyFunc(op func(int, int) int, a, b int) int {
+func ApplyFunc(op func(int, int) int, a, b int) int {
 
 	pointer := reflect.ValueOf(op).Pointer()
 	pc := runtime.FuncForPC(pointer)
@@ -18,11 +18,7 @@ func applyFunc(op func(int, int) int, a, b int) int {
 	return op(a, b)
 }
 
-func maxNumber(a, b int) int {
+func MaxNumber(a, b int) int {
 	return int(math.Max(float64(a), float64(b)))
 }
 
-func main() {
-	result := applyFunc(maxNumber, 3, 4)
-	fmt.Println("applyFunc result:", result)
-}

@@ -1,4 +1,4 @@
-package hello
+package base
 
 import (
 	"fmt"
@@ -9,23 +9,11 @@ import (
 	"os"
 )
 
-func main() {
-
-	fmt.Println("hello word!")
-
-	//create()
-
-	//createFunc()
-
-	//trimTest("lei")
-	bufferTest()
-}
-
 var array = [5]int{1, 2, 3, 4, 5}
 
 var slice1 []int
 
-func create() {
+func Create() {
 	slice5 := make([]int, 5)
 
 	for index, value := range slice5 {
@@ -49,22 +37,22 @@ func create() {
 	}
 }
 
-type user struct {
+type User struct {
 	name  string
 	email string
 }
 
-func (user *user) changeEmail(email string) {
+func (user *User) changeEmail(email string) {
 	user.email = email
 }
 
-func (user user) notify() {
+func (user User) notify() {
 	fmt.Printf("发送邮件给%s<%s>\n", user.name, user.email)
 }
 
-func createFunc() {
+func CreateFunc() {
 
-	chengLei := user{"chenglei", "thedefy@163.com"}
+	chengLei := User{"chenglei", "thedefy@163.com"}
 	chengLei.notify()
 
 	chengLei.changeEmail("TheDefy@163.com")
@@ -74,7 +62,7 @@ func createFunc() {
 
 }
 
-func trimTest(s string) string {
+func TrimTest(s string) string {
 
 	trim := strings.Trim("chenglei hh lei ni hao lei lei ", s)
 
@@ -101,11 +89,10 @@ func isShellSpecialVar(c uint8) bool {
 	return false
 }
 
-func bufferTest()  {
+func BufferTest() {
 	var b bytes.Buffer
-	b.Write([]byte("hello"))// 将字符串写入到buffer中
-	fmt.Fprintf(&b,"word")
+	b.Write([]byte("LearningNotes ")) // 将字符串写入到buffer中
+	fmt.Fprintf(&b, "world !")
 
-	io.Copy(os.Stdout,&b)
-
+	io.Copy(os.Stdout, &b)
 }
