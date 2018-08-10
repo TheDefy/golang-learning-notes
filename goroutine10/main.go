@@ -18,7 +18,7 @@ var ints chan int = make(chan int)
 func main() {
 
 	//ints := make(chan int)
-	loop("main")
+	loop("fortest")
 
 	go loop("go")
 

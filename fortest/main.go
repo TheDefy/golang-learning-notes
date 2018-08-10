@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 	"math"
-	"thedefy/LearningNotes/fortest"
+	"thedefy/LearningNotes/fortest/fortest"
 )
 
 func main() {
