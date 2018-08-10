@@ -1,8 +1,8 @@
 package main
 
 import (
-	"counters"
 	"fmt"
+	"thedefy/LearningNotes/linting64/counters"
 )
 
 var a int = 1

@@ -1,8 +1,8 @@
 package main
 
 import (
-	"entities"
 	"fmt"
+	"thedefy/LearningNotes/linting71/entities"
 )
 
 func main() {
